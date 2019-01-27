@@ -8,7 +8,6 @@ import javax.faces.event.PhaseListener;
 //import javax.inject.Inject;
 //import javax.servlet.http.HttpSession;
 
-
 public class Autorizador implements PhaseListener {
 
 	private static final long serialVersionUID = 1L;
@@ -18,9 +17,15 @@ public class Autorizador implements PhaseListener {
 		System.out.println("afterPhase(PhaseEvent evento)");
 		FacesContext context = evento.getFacesContext();
 		String nomePagina = context.getViewRoot().getViewId();
-
+		System.out.println("Nome da página: " + nomePagina);
+		if (nomePagina.endsWith("/view/index.xhtml") ||
+			nomePagina.endsWith("/view/lancamento.xhtml") || 
+			nomePagina.endsWith("/view/sankhya.xhtml")){
+			return;
+		}
 		
-		// Redirecionamento para login.xhtml
+		
+		// Redirecionamento para index.xhtml
 		NavigationHandler handler = context.getApplication().getNavigationHandler();
 		handler.handleNavigation(context, null, "/view/index?faces-redirect=true");
 		context.renderResponse();
