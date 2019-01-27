@@ -77,7 +77,7 @@ public class LancamentoBean implements Serializable {
 	}
 
 	@Transacional
-	public List<Lancamento> listarTodos() {
+	public List<Lancamento> listarTodos() {	
 		List<Lancamento> todos = new ArrayList<Lancamento>();
 		todos = lancamentoDao.listaTodos();
 		return todos;
