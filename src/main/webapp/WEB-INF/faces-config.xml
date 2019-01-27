@@ -6,7 +6,6 @@
 	<lifecycle>
 		<phase-listener>br.com.controle.util.Autorizador</phase-listener>
 	</lifecycle>
-
 	<!-- Configuração que permite ao Primefaces usar formulários como diálogo -->
 	<application>
 		<action-listener>org.primefaces.application.DialogActionListener</action-listener>
