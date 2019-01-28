@@ -12,8 +12,19 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
+  
+  <mime-mapping>
+		<extension>woff</extension>
+		<mime-type>application/x-font-woff</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>woff2</extension>
+		<mime-type>application/x-font-woff2</mime-type>
+	</mime-mapping>
+  
   <session-config>
     <session-timeout>60</session-timeout>
   </session-config>
