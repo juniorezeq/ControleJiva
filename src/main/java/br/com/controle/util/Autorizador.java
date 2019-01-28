@@ -20,7 +20,8 @@ public class Autorizador implements PhaseListener {
 		System.out.println("Nome da página: " + nomePagina);
 		if (nomePagina.endsWith("/view/index.xhtml") ||
 			nomePagina.endsWith("/view/lancamento.xhtml") || 
-			nomePagina.endsWith("/view/sankhya.xhtml")){
+			nomePagina.endsWith("/view/sankhya.xhtml") ||
+		nomePagina.endsWith("/view/lancamentos.xhtml")){
 			return;
 		}
 		

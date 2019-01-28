@@ -40,15 +40,20 @@ public class LancamentoBean implements Serializable {
 	}
 
 	@Transacional
-	public String novo() {
-		return "/view/lancamento.xhtml?faces-redirect=true";
-	}
-
-	@Transacional
 	public String home() {
 		return "/view/index.xhtml?faces-redirect=true";
 	}
 
+	@Transacional
+	public String lancamento() {
+		return "/view/lancamento.xhtml?faces-redirect=true";
+	}
+
+	@Transacional
+	public String lancamentos() {
+		return "/view/lancamentos.xhtml?faces-redirect=true";
+	}
+	
 	@Transacional
 	public void gravar() {
 
